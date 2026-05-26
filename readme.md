@@ -42,7 +42,7 @@ https://task-manager-app-bay-seven.vercel.app/
 
 ## Backend Deployment Link (Optional)
 
-https://task-manager-app-54yi.onrender.com
+https://task-manager-app-54yi.onrender.com/
 
 ---
 
