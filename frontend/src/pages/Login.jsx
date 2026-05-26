@@ -21,6 +21,9 @@ function Login() {
         }
       );
 
+      // Store JWT Token
+      localStorage.setItem("token", data.token);
+
       alert(data.message);
 
       navigate("/dashboard");
@@ -65,6 +68,7 @@ function Login() {
         </button>
 
         <p className="text-center mt-5 text-sm">
+
           Don’t have an account?{" "}
 
           <Link

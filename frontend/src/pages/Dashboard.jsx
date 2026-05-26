@@ -197,8 +197,31 @@ function Dashboard() {
                   className="bg-gray-100 p-3 rounded mb-3"
                 >
 
+                  {/* Highlight Search */}
                   <p className="font-semibold mb-3">
-                    {task.title}
+
+                    {task.title
+                      .split(
+                        new RegExp(`(${search})`, "gi")
+                      )
+                      .map((part, index) =>
+
+                        part.toLowerCase() ===
+                        search.toLowerCase() &&
+                        search !== "" ? (
+
+                          <span
+                            key={index}
+                            className="bg-yellow-300 px-1 rounded"
+                          >
+                            {part}
+                          </span>
+
+                        ) : (
+                          part
+                        )
+                      )}
+
                   </p>
 
                   <div className="flex flex-wrap gap-2">
